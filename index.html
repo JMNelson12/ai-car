@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./scripts.js"></script>
+</head>
+<body>
+  <div class='scene'>
+    <div class='grass' id='topDebug'>
+      Avoided: <span id="avoided">0</span><br>
+      Crash: <span id="crash">0</span><br>
+      Success Rate: <span id="successRate">0</span>%<br><br>
+      <input type='button' value='Start' onClick="runSim('1')" />
+      <input type='button' value='Stop' onClick="runSim('0')" />
+    </div>
+    <div class='road'>
+      <div class='ai' id='ai'>
+        <div class='sensor_1'>Sensor 1</div>
+        <div class='sensor_2' id='sensor_2'>Sensor 2</div>
+        <div class='sensor_3'>Sensor 3</div>
+      </div>
+      <div class='wall' id='wall'></div>
+    </div>
+    <div class='grass'></div>
+  </div>
+
+  <div class='debugArea'>
+    <!-- <span style="color: #fff">Iterations: </span><input type='text' id='stepsDone' value='0' style='width:50px' /> -->
+    <!-- <span style="color: #fff">Speed: </span><input type='text' id='txtSpeed' value='40' style='width:50px' />     -->
+    <table class='tableDebug'>
+      <tr>
+        <td>AI zone</td>
+        <td>Wall zone</td>
+        <!-- <td>Trying</td> -->
+      </tr>
+      <tr>
+        <td id='t_ai_zone'>-</td>
+        <td id='t_wall_zone'>-</td>
+        <!-- <td id='t_trying'>-</td> -->
+      </tr>
+    </table>
+    <br>
+    <table class='tableDebugSmall'>
+      <tr>
+        <td>[AI zone][Wall zone][Do]</td>
+        <td>[Success]</td>
+      </tr>
+      <tr>
+        <td id='exp_1'>000</td>
+        <td id='succ_000'>0</td>
+      </tr>
+      <tr>
+        <td id='exp_2'>001</td>
+        <td id='succ_001'>0</td>
+      </tr>
+      <tr>
+        <td id='exp_3'>010</td>
+        <td id='succ_010'>0</td>
+      </tr>
+      <tr>
+        <td id='exp_4'>011</td>
+        <td id='succ_011'>0</td>
+      </tr>
+      <tr>
+        <td id='exp_5'>100</td>
+        <td id='succ_100'>0</td>
+      </tr>
+      <tr>
+        <td id='exp_6'>101</td>
+        <td id='succ_101'>0</td>
+      </tr>
+      <tr>
+        <td id='exp_7'>110</td>
+        <td id='succ_110'>0</td>
+      </tr>
+      <tr>
+        <td id='exp_8'>111</td>
+        <td id='succ_111'>0</td>
+      </tr>
+    </table>
+    <br>
+    <br>
+  </div>
+
+</body>
+
+</html>
